@@ -1,27 +1,6 @@
-Full name:  ___Ransford Antwi___________
-SEAS login: ______ransford________
+The application server is HTTP 1.1 compliant, and it must support all the features described in
+HTTP Made Really Easy. This means that it must be able to support HTTP 1.0 clients as well as 1.1 clients.
+Persistent connections are suggested but not required for HTTP 1.1 servers. 
 
-Which features did you implement? 
-   Entire assignment
-
-Did you complete any extra-credit tasks? If so, which ones?
-  None
-
-Any special instructions for building and running your solution?
-  (include detailed instructions, or write 'None')
-
-None
-
-Did you personally write _all_ the code you are submitting
-(other than code from the course web page)?
-  [x] Yes
-  [ ] No
-Did you copy any code from the Internet, or from classmates?
-  [ ] Yes
-  [x] No
-  
- Although I did research how to use certain classes, e.g. using an inputStream in java
-
-Did you collaborate with anyone on this assignment?
-  [ ] Yes
-  [x] No
+For efficiency, the server is implemented using a thread pool. Specifically, there is one thread that listens for incoming TCP requests and enqueues them, and some number of threads that process the requests from the queue and return the responses. 
+Everything is written from scratch including the thread pool and blocking Queue.
